@@ -1,0 +1,26 @@
+PowerShell Malicious Script Detection Results
+(Trained WITH mixed_malicious dataset)
+============================================================
+
+Total training samples: 12720
+  - Malicious (pure + mixed): 8404
+  - Benign: 4316
+
+Accuracy:  0.9344 (93.44%)
+Precision: 0.9490
+Recall:    0.9518
+F1-Score:  0.9504
+AUC-ROC:   0.9855
+
+Cross-validation accuracy: 0.9306 (+/- 0.0055)
+Cross-validation scores: [0.9273084479371316, 0.9218673218673219, 0.9331695331695332, 0.9331695331695332, 0.9375921375921376]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      Benign       0.91      0.90      0.90       863
+   Malicious       0.95      0.95      0.95      1681
+
+    accuracy                           0.93      2544
+   macro avg       0.93      0.93      0.93      2544
+weighted avg       0.93      0.93      0.93      2544
