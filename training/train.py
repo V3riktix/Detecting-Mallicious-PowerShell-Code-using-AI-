@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 # Add training to path
-sys.path.insert(0, '/home/patryk/studia/bartczuk/training')
+sys.path.insert(0, './training')
 
 from data_loader import PowerShellDataLoader
 from feature_extractor import PowerShellFeatureExtractor
@@ -72,9 +72,9 @@ def main():
     print("="*60)
     
     # Paths
-    data_dir = Path('/home/patryk/studia/bartczuk')
-    models_dir = Path('/home/patryk/studia/bartczuk/models')
-    output_dir = Path('/home/patryk/studia/bartczuk/output')
+    data_dir = Path('./')
+    models_dir = Path('./models')
+    output_dir = Path('./output')
     
     models_dir.mkdir(exist_ok=True)
     output_dir.mkdir(exist_ok=True)
@@ -123,7 +123,8 @@ def main():
         min_samples_leaf=2,
         random_state=42,
         n_jobs=-1,
-        verbose=1
+        verbose=1,
+        class_weight='balanced'
     )
     
     rf_model.fit(X_train_scaled, y_train)
